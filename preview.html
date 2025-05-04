@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #myCanvas {
+            border: solid black; /* Border color */
+            border-width: calc(2mm + (4mm * var(--random, 0))); /* Random 2-6 mm */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+    <script>
+        // Set random border width (2-6 mm)
+        document.documentElement.style.setProperty('--random', Math.random());
+        
+        // Draw sample content on canvas
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'lightblue';
+        ctx.fillRect(10, 10, 180, 180); // Sample rectangle
+    </script>
+</body>
+</html>
